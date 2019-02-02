@@ -1,15 +1,11 @@
 /*=================================
-This code demostrates 4-Wire Touch screen 
+4-Wire Touchscreen controller with touch sense
+and resoultion mapping by Aftermathx25
+based on code for 4-Wire Touch screen
 interfacing with Arduino
-
+from
 blog.circuits4you.com
 www.circuits4you.com
-
-4- Wire Touchscreen Connections
-A0=====X+
-A1=====X-
-A2=====Y+
-A3=====Y-
 =================================*/
 
 #define X1 A0
@@ -18,7 +14,7 @@ A3=====Y-
 #define Y1 A1
 
 #define Xresolution 100
-#define Yresolution 100 
+#define Yresolution 100
 
 #define correctX 64
 #define correctY 150
@@ -52,16 +48,16 @@ void loop()
   {
 
      pinMode(Y1,INPUT);
-     pinMode(Y2,INPUT);  
+     pinMode(Y2,INPUT);
      digitalWrite(Y2,LOW);
      pinMode(X1,OUTPUT);
      digitalWrite(X1,HIGH);
      pinMode(X2,OUTPUT);
      digitalWrite(X2,LOW);
      rawX = abs(analogRead(Y1)- correctX);
-  
+
      X = map(rawX, 0, maxX, 0, Xresolution);
-      
+
      pinMode(X1,INPUT);
      pinMode(X2,INPUT);
      digitalWrite(X2,LOW);
@@ -70,10 +66,10 @@ void loop()
      pinMode(Y2,OUTPUT);
      digitalWrite(Y2,LOW);
      rawY = abs(analogRead(X1) - correctY);
-  
+
      Y = map(rawY, 0, maxY, 0, Yresolution);
 
-   Serial.print("X = ");  
+   Serial.print("X = ");
    Serial.print(X);
    Serial.print(" Y = ");
    Serial.println(Y);
@@ -85,7 +81,7 @@ void loop()
     pinMode(Y1, INPUT);
     digitalWrite(Y1, LOW);
     pinMode(Y2, INPUT_PULLUP);
-  
+
      while(digitalRead(Y2) == LOW)
      {
       delay(10);
