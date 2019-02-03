@@ -1,11 +1,11 @@
 # touchscreen_driver
 Touchscreen driver for 4 wire resistive touchscreen with touch sense and screen resolution mapping.
-Program as a response outputs touch coordinates on console.
+Program as a response outputs touch coordinates on the console.
 
 # touchscreen_mouse
 Program based on the previous version of my code which just made it work as the mouse. 
 
-There may be some adjustments needed for other platforms and touchscreen modules, which apply to both versions of code:
+There may be some adjustments needed for other platforms and touchscreen modules, which apply to both versions of the code:
 
 # Resolution setting
 
@@ -13,7 +13,7 @@ There may be some adjustments needed for other platforms and touchscreen modules
 #define Xresolution 704
 #define Yresolution 550
 ```
-Needless to say that it's just a screen resolution of the devices you'd like to use a touchscreen with.
+Needless to say that it's just a screen resolution of the device you'd like to use a touchscreen with.
 
 # Corrections setting
 
