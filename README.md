@@ -29,7 +29,7 @@ In some cases your ```rawX``` or ```rawY``` output may be off by couple of pixel
 #define maxX 900
 #define maxY 750 
 ```
-All resistive touchscreens have their minimum and maximum resistance values, we can adjust that by utilizing these consts. 
+All resistive touchscreens have their minimum and maximum resistance values, we can adjust these by utilizing these consts. 
 Simplest way to measure them is to press on the furthest possible points of both vertical and horizontal touchscreen plane.
 
 # Debounce time
