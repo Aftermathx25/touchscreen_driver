@@ -23,7 +23,7 @@ Needless to say that it's just a screen resolution of the device you'd like to u
 ```
 In some cases your ```rawX``` or ```rawY``` output may be off by couple of pixels, these consts are used for corrections.
 
-# Resitance values setting
+# Resistance values setting
 
 ``` 
 #define maxX 900
